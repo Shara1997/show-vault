@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { MdImageNotSupported } from "react-icons/md";
+import Header from "./Header";
 
 const ShowList = () => {
   const [show, setShow] = useState([]);
@@ -15,9 +16,10 @@ const ShowList = () => {
 
   return (
     <>
+      <Header />
       <h2 className="showlist-heading">Available Shows</h2>
       <div className="showlist-container">
-        <ul className="shows">
+        <ul className="col-4 shows">
           {show.map((show) => (
             <li key={show.show.id} className="showList-items">
               <img
