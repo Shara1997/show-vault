@@ -33,7 +33,9 @@ body{
 .shows {
   display: grid;
   grid-template-columns: repeat(3, 400px);
+  grid-column-gap: 10px;
   margin: auto;
+  justify-items: center;
 }
 .showList-items{
   list-style: none;
@@ -41,7 +43,7 @@ body{
   flex-direction: column;
   border: 1px solid #ffffff63;
   border-radius: 16px;
-  margin: 15px 10px;
+  margin: 15px 0px;
   place-items: center;
   color: white;
   background-color: #292828;
@@ -95,5 +97,33 @@ body{
 .show-summary{
   margin-bottom: 20px;
   padding: 20px;
+}
+
+@media screen and (max-width: 720px){
+  .shows {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 721px) and (max-width: 1080px){
+  .shows {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+  .showList-items{
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 1081px) {
+  .shows{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 15px;
+    margin: auto;
+  }
+  .showList-items{
+    width: 300px;
+  }
 }
 

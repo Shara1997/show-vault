@@ -19,9 +19,9 @@ const ShowList = () => {
       <Header />
       <h2 className="showlist-heading">Available Shows</h2>
       <div className="showlist-container">
-        <ul className="col-4 shows">
+        <ul className="list-group list-group-horizontal shows">
           {show.map((show) => (
-            <li key={show.show.id} className="showList-items">
+            <li key={show.show.id} className="list-group-item showList-items">
               <img
                 className="show-img"
                 src={
